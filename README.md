@@ -6,7 +6,7 @@ The notebook covers **20 structured tasks**, including data loading, grouping, m
 
 
 
-## 🔧 Technologies Used
+## Technologies Used
 
 * Python
 * Jupyter Notebook
@@ -15,7 +15,7 @@ The notebook covers **20 structured tasks**, including data loading, grouping, m
 * Matplotlib / Seaborn
 
 
-## 📘 Dataset Description
+## Dataset Description
 
 The project works with 3 datasets:
 
@@ -27,7 +27,7 @@ Each dataset is cleaned and transformed before performing analysis.
 
 ---
 
-# ✅ **TASKS COMPLETED IN THIS PROJECT**
+#  **TASKS COMPLETED IN THIS PROJECT**
 
 Below is the exact set of problems solved in the notebook.
 
@@ -84,7 +84,7 @@ Below is the exact set of problems solved in the notebook.
 
 
 
-# 📈 Key Outputs
+# Key Outputs
 
 * Total spending per customer
 * Total repayment per customer
