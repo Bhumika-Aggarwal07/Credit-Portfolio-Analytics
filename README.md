@@ -1,98 +1,136 @@
-#  Credit Banking Analysis Project
+# Credit Portfolio Analytics — Banking Case Study
 
-This project contains a complete analysis of credit banking data using Python and Jupyter Notebook. The goal is to perform detailed data cleaning, transformation, aggregation, and financial calculations using real-world banking datasets such as **Credit banking data**, **spend data**, and **repayment data**.
+> Analysing customer risk, spending behaviour across a retail bank's credit card portfolio using Python and Pandas.
 
-The notebook covers **20 structured tasks**, including data loading, grouping, merging, date/time processing, visual analysis, and profit/penalty calculations.
-
-
-
-## Technologies Used
-
-* Python
-* Jupyter Notebook
-* pandas
-* NumPy
-* Matplotlib / Seaborn
-
-
-## Dataset Description
-
-The project works with 3 datasets:
-
-* **Credit Banking_Project1.csv** → Customer info (age, segment, etc.)
-* **spend.csv** → Monthly spending transactions
-* **repayment.csv** → Customer repayment data
-
-Each dataset is cleaned and transformed before performing analysis.
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?style=flat-square&logo=pandas)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualisation-4c72b0?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
 ---
 
-#  **TASKS COMPLETED IN THIS PROJECT**
+## Problem Statement
 
-Below is the exact set of problems solved in the notebook.
-
----
-
-## 🔹 **1. Data Loading and Basic Operations**
-
-1. Loaded `Credit Banking_Project1.csv` and displayed first 5 rows.
-2. Loaded `spend.csv` and `repayment.csv`, renamed columns, and displayed first 10 rows.
-3. Calculated mean age of customers **over 18**, and replaced any age below 18 with this mean.
+A mid-size retail bank wants to evaluate the health of its credit card portfolio. The business needs to:
+- Identify **high-risk customers** before they default
+- Understand **spending behaviour** across customer segments
+- Find customers who are under-charged or poorly matched to their card tier
+- Generate **actionable recommendations** to reduce credit losses and grow revenue
 
 ---
 
-## 🔹 **2. Grouping and Aggregation**
+## Dataset
 
-4. Calculated **total spending amount per customer**.
-5. Calculated total repayment per customer and displayed **top 5 customers**.
-6. Merged total spending and total repayment into a **single dataframe**.
+Three relational tables — synthetic banking data representing a realistic portfolio:
 
----
-
-## 🔹 **3. Conditional Filtering & Calculations**
-
-7. Filtered customers who **repaid more than they spent** and calculated their **surplus**.
-8. For those customers, calculated **return with 2% bonus** on surplus.
+| Table | Description | Size |
+|---|---|---|
+| `credit.csv` | Customer master — demographics, card type, credit limit | 100 rows × 8 cols |
+| `spend.csv` | Monthly spend transactions by category | 1,500 rows × 5 cols |
+| `repayment.csv` | Monthly repayment amounts | 1,523 rows × 5 cols |
 
 ---
 
-## 🔹 **4. Date & Time Operations**
+## Key Findings
 
-9. Converted the 'Month' column of `spend` to datetime, extracted month+year.
-10. Grouped spend data by **Customer + Month-Year** to compute **monthly spending**.
-
----
-
-## 🔹 **5. Sorting & Ranking**
-
-11. Displayed **top 10 customers** by total spending.
-12. Grouped customers by **segment** and calculated total spending sorted descending.
-
----
-
-## 🔹 **6. Merging and Joining**
-
-13. Merged segment information with spending to analyze **segment-level patterns**.
-14. Merged age-group information with spending and calculated **total spending per age group**.
+| # | Finding | Business Implication |
+|---|---|---|
+| 1 | ~45% of customers are **Overpaid** — repayments exceed spending | Strong candidates for credit limit upgrades and premium card offers |
+| 2 | **Salaried Private sector** has the highest High-Risk concentration (~54%) | Stricter income verification needed at underwriting stage |
+| 3 | **Platinum & Silver cards** show ~43% High-Risk customers | Approval criteria for these tiers needs a review |
+| 4 | **Gold card users** have the lowest High-Risk rate (~16%) | Most financially stable segment — prioritise for retention and loyalty rewards |
+| 5 | **26–35 age cohort** drives the highest spend volumes | Key growth segment for targeted EMI and lifestyle offers |
+| 6 | Persistent monthly **Coverage Gaps** indicate structural repayment lag | Pre-due-date reminders could significantly improve repayment rates |
+| 7 | Spend concentrated in **2–3 categories** | Opportunity for merchant co-brand partnerships and category-specific cashback |
 
 ---
 
-## 🔹 **7. Mapping & Categorization**
+## Analysis Sections
 
-15. Created a dictionary mapping spending types (e.g., "FOOD", "AIR TICKET") to categories like "Needs", "Travel", etc.
-16. Added a new **Category** column to spend data and calculated total spending by category.
+1. Libraries & Setup
+2. Data Loading & Overview
+3. Data Cleaning & Preprocessing
+4. Customer Risk Classification (Utilisation Ratio + Repayment Coverage)
+5. Spending Behaviour by Segment, Age Group, and Card Type
+6. Repayment Analysis & Coverage Gap Detection
+7. Correlation Analysis — Spend vs Repayment by Risk Tier
+8. Category-wise Spend Breakdown
+9. Key Business Insights
+10. Business Recommendations (Immediate / Medium-Term / Growth)
 
+---
 
+## Business Recommendations Summary
 
-# Key Outputs
+**Immediate (Risk Mitigation)**
+- Auto-flag and freeze over-limit accounts until partial repayment is made
+- Prioritise collections for High-Risk customers in the Salaried Private segment
+- Reduce credit limits for customers with Utilisation Ratio > 1.0
 
-* Total spending per customer
-* Total repayment per customer
-* Surplus and return
-* Monthly spending trends
-* Category-wise spending
-* Segment-wise spending
-* Age-group spending
-* Difference and penalty calculations
-* Monthly profit summary
+**Medium-Term**
+- Strengthen underwriting for Platinum and Silver cards with higher income verification
+- Introduce early repayment incentives (e.g., 1% cashback for full pre-due-date payment)
+- Implement monthly trend alerts for customers whose repayment-spend gap widens for 2+ consecutive months
 
+**Growth**
+- Upsell credit limit increases to Overpaid customers who show strong repayment capacity
+- Establish co-brand merchant partnerships in the top 2–3 spending categories
+- Launch lifecycle marketing campaigns targeting the 26–35 age cohort
+
+---
+
+## Tech Stack
+
+- **Python 3.13** — core analysis
+- **Pandas** — data manipulation, merging 3 relational tables, groupby aggregations
+- **NumPy** — numerical calculations
+- **Matplotlib + Seaborn** — visualisations (bar charts, heatmaps, scatter plots, trend lines)
+- **Jupyter Notebook** — structured narrative analysis
+
+---
+
+## How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/Bhumika-Aggarwal07/Credit-Banking-Project-Pandas.git
+cd Credit-Banking-Project-Pandas
+
+# Install dependencies
+pip install pandas numpy matplotlib seaborn jupyter
+
+# Launch notebook
+jupyter notebook notebook/Credit_Banking_Project_v2.ipynb
+```
+
+The data files are in the `data/` folder. No external API keys or downloads needed.
+
+---
+
+## Project Structure
+
+```
+Credit-Banking-Project-Pandas/
+├── data/
+│   ├── credit.csv
+│   ├── spend.csv
+│   └── repayment.csv
+├── notebook/
+│   └── Credit_Banking_Project_v2.ipynb
+└── README.md
+```
+
+---
+
+## Resume Bullet Points
+
+- Analysed a 100-customer retail banking credit portfolio across 3 relational tables (3,000+ rows) using Python and Pandas to identify risk segments, spending patterns, and revenue leakage
+- Built a customer risk classification framework using Utilisation Ratio and Repayment Coverage metrics; found that Platinum/Silver cardholders hold ~43% high-risk customers — surfaced a structural underwriting gap
+- Delivered 7 data-driven business insights and 9 actionable recommendations across risk mitigation, medium-term operations, and growth strategy
+
+---
+
+## Author
+
+**Bhumika Aggarwal** — 1st Year BTech CSE  
+[LinkedIn](https://www.linkedin.com/in/bhumika-aggarwal-5a89ab379) · [GitHub](https://github.com/Bhumika-Aggarwal07)
