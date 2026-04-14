@@ -12,9 +12,9 @@
 ## Problem Statement
 
 A mid-size retail bank wants to evaluate the health of its credit card portfolio. The business needs to:
-- Identify **high-risk customers** before they default
+- Identify **high risk customers** before they default
 - Understand **spending behaviour** across customer segments
-- Find customers who are under-charged or poorly matched to their card tier
+- Find customers who are undercharged or poorly matched to their card tier
 - Generate **actionable recommendations** to reduce credit losses and grow revenue
 
 ---
@@ -35,7 +35,7 @@ Three relational tables — synthetic banking data representing a realistic port
 
 | # | Finding | Business Implication |
 |---|---|---|
-| 1 | ~45% of customers are **Overpaid** — repayments exceed spending | Strong candidates for credit limit upgrades and premium card offers |
+| 1 | ~45% of customers are **Overpaid**  repayments exceed spending | Strong candidates for credit limit upgrades and premium card offers |
 | 2 | **Salaried Private sector** has the highest High-Risk concentration (~54%) | Stricter income verification needed at underwriting stage |
 | 3 | **Platinum & Silver cards** show ~43% High-Risk customers | Approval criteria for these tiers needs a review |
 | 4 | **Gold card users** have the lowest High-Risk rate (~16%) | Most financially stable segment — prioritise for retention and loyalty rewards |
@@ -81,11 +81,11 @@ Three relational tables — synthetic banking data representing a realistic port
 
 ## Tech Stack
 
-- **Python 3.13** — core analysis
-- **Pandas** — data manipulation, merging 3 relational tables, groupby aggregations
-- **NumPy** — numerical calculations
-- **Matplotlib + Seaborn** — visualisations (bar charts, heatmaps, scatter plots, trend lines)
-- **Jupyter Notebook** — structured narrative analysis
+- **Python 3.13** for core analysis
+- **Pandas** for data manipulation, merging 3 relational tables, groupby aggregations
+- **NumPy** for numerical calculations
+- **Matplotlib & Seaborn** for visualisations (bar charts, heatmaps, scatter plots, trend lines)
+- **Jupyter Notebook** for structured narrative analysis
 
 ---
 
@@ -123,5 +123,5 @@ Credit-Banking-Project-Pandas/
 
 ## Author
 
-**Bhumika Aggarwal** — 1st Year BTech CSE  
+**Bhumika Aggarwal** (1st Year BTech CSE)  
 [LinkedIn](https://www.linkedin.com/in/bhumika-aggarwal-5a89ab379) · [GitHub](https://github.com/Bhumika-Aggarwal07)
