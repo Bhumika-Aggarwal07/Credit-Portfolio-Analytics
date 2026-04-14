@@ -1,4 +1,4 @@
-# Credit Portfolio Analytics — Banking Case Study
+# Credit Portfolio Analytics 
 
 > Analysing customer risk, spending behaviour across a retail bank's credit card portfolio using Python and Pandas.
 
