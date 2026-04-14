@@ -118,15 +118,6 @@ Credit-Banking-Project-Pandas/
 ├── notebook/
 │   └── Credit_Banking_Project_v2.ipynb
 └── README.md
-```
-
----
-
-## Resume Bullet Points
-
-- Analysed a 100-customer retail banking credit portfolio across 3 relational tables (3,000+ rows) using Python and Pandas to identify risk segments, spending patterns, and revenue leakage
-- Built a customer risk classification framework using Utilisation Ratio and Repayment Coverage metrics; found that Platinum/Silver cardholders hold ~43% high-risk customers — surfaced a structural underwriting gap
-- Delivered 7 data-driven business insights and 9 actionable recommendations across risk mitigation, medium-term operations, and growth strategy
 
 ---
 
